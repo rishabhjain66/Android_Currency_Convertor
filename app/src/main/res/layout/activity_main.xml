@@ -1,0 +1,210 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+
+
+
+    <TextView
+        android:id="@+id/CanadaDollar"
+        android:text="CanadaDollar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+
+
+    <EditText
+        android:id="@+id/currencyCanada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/CanadaDollar"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/CanadaDollar"
+        android:ems="6"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        android:editable="false"
+        android:enabled="false">
+
+
+    </EditText>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:id="@+id/imageView"
+        android:src="@drawable/canada1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <TextView
+        android:id="@+id/USDollar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CanadaDollar"
+        android:layout_below="@+id/CanadaDollar"
+        android:padding="10dp"
+        android:text="USDollar"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+
+
+    <EditText
+        android:id="@+id/currencyUS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/USDollar"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/CanadaDollar"
+        android:padding="5dp"
+        android:ems="6"
+        android:inputType="numberDecimal"
+
+        android:textSize="20sp">
+
+
+    </EditText>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:id="@+id/imageView2"
+        android:src="@drawable/us"
+        android:layout_below="@+id/imageView"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/Ruppee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/USDollar"
+        android:layout_below="@+id/USDollar"
+        android:padding="10dp"
+        android:text="INDRuppee"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+
+
+    <EditText
+        android:id="@+id/currencyRuppee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Ruppee"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/CanadaDollar"
+        android:padding="5dp"
+        android:ems="6"
+        android:inputType="numberDecimal"
+
+        android:textSize="20sp">
+
+
+    </EditText>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:id="@+id/imageView3"
+        android:src="@drawable/india"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2" />
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/Ruppee"
+        android:layout_alignRight="@+id/imageView3"
+        android:layout_alignEnd="@+id/imageView3">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="US to Canada"
+            android:id="@+id/uc" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Canada to US"
+            android:id="@+id/cu" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Canada to India"
+            android:id="@+id/ci" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="India to Canada"
+            android:id="@+id/ic" />
+    </RadioGroup>
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar1"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignRight="@+id/currencyRuppee"
+        android:layout_alignEnd="@+id/currencyRuppee"
+        android:layout_toRightOf="@+id/Ruppee"
+        android:layout_toEndOf="@+id/Ruppee"
+        android:max="1000"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/calButton"
+        android:layout_below="@+id/seekBar1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/seekValue"
+        android:layout_alignBottom="@+id/seekBar1"
+        android:layout_alignBaseline="@+id/seekBar1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result will display here."
+        android:id="@+id/resultLabel"
+        android:layout_below="@+id/calButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/radioGroup"
+        android:layout_alignEnd="@+id/radioGroup"
+        android:layout_alignParentBottom="true"
+        android:editable="false" />
+
+
+</RelativeLayout>
